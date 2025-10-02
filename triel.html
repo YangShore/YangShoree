@@ -1,68 +1,211 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <style>
-        img{
-          border-radius: 50%;
-          border: 5px solid #556b2f;
-        }
-      </style>
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>CRUZ</title>
-        <body style="background-color:#8fbc8f;">
-        <center> 
-                <h1 style="background-color:#556b2f;"> <i> <u> Cruz </center> </h1> </i> </u>
-        <marquee> <i><b>GROUP #4</u></b></marquee>
-                <marquee> <i><b>12 - TITANIUM</u></b></marquee>
-                <br>
-        <br>
-        <br>
-            <center><img src="triel2.jpg" length="200px" width="300px"></center>
-            <br>
-        <center><p style="border-width:4px;border-style:dotted;border-color:#6b8e23;"> <span style="color:#2f4f4f">
-        My name is 
-        <b><mark style="background-color:green;color:white;"> Triel Cali T. Cruz,</mark> </b>
-         i am
-        <b> <mark style="background-color:green;color:white;"> 17 Years Old,</mark> </b>
-         and i was born on
-        <b> <mark style="background-color:green;color:white;"> July 26, 2007</mark> </b>
-         at
-            <b><mark style="background-color:green;color:white;">Muntinlupa City</mark></b></center></span></p>
-            
-        <br>
-        <br>
-        <br>
-                <center><p style="border-width:3px;border-style:solid;border-color:#6b8e23;"><b> MUSIC </b></p></center>
-                <center><video src="triel.mp4" height="300" width="500px" controls></video></center>
-                <source src="hardware.mp4" type="video/mp4">
-                <source src="hardware.ogg" type="video/ogg">
-                <br>
-        <center><p style="border-width:5px;border-style:dotted;border-color:#6b8e23;"> <span style="color:#2f4f4f">
-        My favorite color is <b> <mark style="background-color:green;color:white;">Teal Green,</mark></b>
-        and i like listening to 
-        <b> <mark style="background-color:green;color:white;">Life is full by John Mayer,</mark></b>
-        because his song really suits my taste in music.
-        I've also been watching <b> <mark style="background-color:green;color:white;">Love Next Door</mark></b>
-        because the plots of this story is really funny and sad at the same time, 
-        i also like <b> <mark style="background-color:green;color:white;">Leche Flan</mark></b>
-        because my grandma has been making this for me since i was a child, and it became part of my core memory.
-         And i have been craving for this lately since, i haven't eaten one in a while.
-        I really like <b> <mark style="background-color:green;color:white;">Learning new things</mark></b> too! i like how it brings me a sense of self-achievement.</p></center>
-    
-        <br>
-        <br>
-        <br>
-        <marquee> <i><b>"To anyone i've offended this year, please work on yourself so that i don't have to do it again."</u></b></marquee>
-                <a href="index.html" style="background-color:#556b2f;color:#90ee90;"> BACK </a>
-        </head>
-            <style>
-*{
-        margin: 20;padding: 100;
-        font-size: 27.9px;
-        font-family: "Comfortaa", sans-serif;
-        }
-        </style>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Triel Cali T. Cruz | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #556b2f;
+      --accent: #6b8e23;
+      --bg: #8fbc8f;
+      --highlight: #2f4f4f;
+      --mark-bg: #228B22;
+      --mark-color: #fff;
+    }
+    body {
+      background: var(--bg);
+      margin: 0;
+      font-family: 'Comfortaa', sans-serif;
+      color: var(--highlight);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      max-width: 500px;
+      margin: 3rem auto 2rem auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 32px rgba(86,107,47,0.15);
+      border: 2px solid var(--primary);
+    }
+    .profile-img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--primary);
+      box-shadow: 0 2px 12px rgba(86,107,47,0.18);
+    }
+    h1 {
+      text-align: center;
+      color: #fff;
+      background: var(--primary);
+      padding: 1rem;
+      border-radius: 14px 14px 0 0;
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px rgba(47,79,79,0.17);
+    }
+    .tagline {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      background: #f3f8f3;
+      border-radius: 8px;
+      padding: 0.5em 0;
+    }
+    .scrolling-text {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      margin: 0.5em 0 1em 0;
+      height: 2.2em;
+      position: relative;
+      background: #f4fff4;
+    }
+    .scrolling-text span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 12s linear infinite;
+      color: var(--primary);
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 2.2em;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .info, .favorites {
+      background: #f7fdf7;
+      border: 2px dotted var(--accent);
+      border-radius: 12px;
+      padding: 1.1em 1.5em;
+      margin: 1.5em 0;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    mark {
+      background: var(--mark-bg);
+      color: var(--mark-color);
+      border-radius: 5px;
+      padding: 0.1em 0.35em;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin: 2.2em 0 1em 0;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.2em;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 1em 0;
+    }
+    video {
+      border-radius: 14px;
+      border: 2.5px solid var(--accent);
+      box-shadow: 0 2px 12px rgba(47,79,79,0.13);
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      background: #222;
+    }
+    .quote {
+      margin: 2rem 0 1rem 0;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.1em;
+      color: var(--primary);
+      background: #eafbe1;
+      border-left: 5px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 0.8em 1em;
+      box-shadow: 0 2px 12px rgba(86,107,47,0.07);
+    }
+    .back-link {
+      display: inline-block;
+      margin: 1.5em 0 0 0;
+      padding: 0.6em 1.6em;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.07rem;
+      letter-spacing: 1px;
+      transition: background 0.2s;
+    }
+    .back-link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    @media (max-width:600px) {
+      .container {
+        max-width: 98vw;
+        padding: 1em 0.2em;
+      }
+      .profile-img {
+        width: 120px; height: 120px;
+      }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Triel Cali T. Cruz</h1>
+    <div class="tagline">GROUP #4 &mdash; 12 TITANIUM</div>
+    <div class="scrolling-text"><span>"To anyone I've offended this year, please work on yourself so that I don't have to do it again."</span></div>
+
+    <img src="triel2.jpg" alt="Triel Cali T. Cruz" class="profile-img">
+
+    <div class="info">
+      My name is <b><mark>Triel Cali T. Cruz</mark></b>, I am
+      <b><mark>17 Years Old</mark></b>, and I was born on
+      <b><mark>July 26, 2007</mark></b> at
+      <b><mark>Muntinlupa City</mark></b>.
+    </div>
+
+    <div class="section-title">Music</div>
+    <div class="video-container">
+      <video controls poster="triel2.jpg">
+        <source src="triel.mp4" type="video/mp4">
+        <source src="hardware.mp4" type="video/mp4">
+        <source src="hardware.ogg" type="video/ogg">
+        Sorry, your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="favorites">
+      My favorite color is <b><mark>Teal Green</mark></b>, and I like listening to
+      <b><mark>Life is Full</mark></b> by John Mayer because his song really suits my taste in music.<br><br>
+      I've also been watching <b><mark>Love Next Door</mark></b> because the plots of this story are really funny and sad at the same time.<br><br>
+      I also like <b><mark>Leche Flan</mark></b> because my grandma has been making this for me since I was a child, and it became part of my core memory. I have been craving this lately since I haven't eaten one in a while.<br><br>
+      I really like <b><mark>Learning new things</mark></b> too! I love how it brings me a sense of self-achievement.
+    </div>
+    <a href="index.html" class="back-link">&larr; BACK</a>
+  </div>
+</body>
 </html>
