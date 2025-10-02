@@ -1,192 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8">
   <title>Triel Cali T. Cruz | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #556b2f;
-      --accent: #6b8e23;
-      --bg: #8fbc8f;
-      --highlight: #2f4f4f;
-      --mark-bg: #228B22;
-      --mark-color: #fff;
+      --primary: #355c4a;
+      --secondary: #95c8a9;
+      --accent: #e2f8e5;
+      --text: #223026;
+      --white: #fff;
+      --shadow: 0 8px 32px rgba(53,92,74,0.15);
+      --radius: 24px;
     }
-    body {
-      background: var(--bg);
+    html, body {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Comfortaa', sans-serif;
-      color: var(--highlight);
+      padding: 0;
+      background: linear-gradient(135deg, #c8ecd0 0%, #e3f6ed 100%);
+      font-family: 'Montserrat', 'Comfortaa', sans-serif;
+      color: var(--text);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-    .container {
-      background: #fff;
-      padding: 2.5rem 2rem;
-      max-width: 500px;
+    .main-card {
+      background: var(--white);
+      max-width: 420px;
       margin: 3rem auto 2rem auto;
-      border-radius: 20px;
-      box-shadow: 0 6px 32px rgba(86,107,47,0.15);
-      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     .profile-img {
-      display: block;
-      margin: 0 auto 1.5rem auto;
-      width: 200px;
-      height: 200px;
+      width: 130px;
+      height: 130px;
       object-fit: cover;
       border-radius: 50%;
-      border: 6px solid var(--primary);
-      box-shadow: 0 2px 12px rgba(86,107,47,0.18);
+      border: 4px solid var(--secondary);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 18px rgba(53,92,74,0.14);
+      background: #e3f6ed;
     }
     h1 {
-      text-align: center;
-      color: #fff;
-      background: var(--primary);
-      padding: 1rem;
-      border-radius: 14px 14px 0 0;
-      font-size: 2.5rem;
-      margin: 0 0 1rem 0;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-shadow: 1px 2px 8px rgba(47,79,79,0.17);
-    }
-    .tagline {
-      text-align: center;
-      font-size: 1.1rem;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      background: #f3f8f3;
-      border-radius: 8px;
-      padding: 0.5em 0;
-    }
-    .scrolling-text {
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      margin: 0.5em 0 1em 0;
-      height: 2.2em;
-      position: relative;
-      background: #f4fff4;
-    }
-    .scrolling-text span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 12s linear infinite;
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.2rem;
+      margin: 0 0 0.2em 0;
       color: var(--primary);
-      font-weight: 700;
-      font-style: italic;
-      font-size: 1.1rem;
-      line-height: 2.2em;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
-    @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+    .subtitle {
+      font-size: 1.17rem;
+      color: var(--secondary);
+      font-weight: 500;
+      margin-bottom: 1.3em;
+      letter-spacing: 1.1px;
     }
-    .info, .favorites {
-      background: #f7fdf7;
-      border: 2px dotted var(--accent);
-      border-radius: 12px;
-      padding: 1.1em 1.5em;
-      margin: 1.5em 0;
+    .chip {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      border-radius: 40px;
+      padding: 0.45em 1.2em;
+      font-size: 0.95em;
+      margin: 0.2em 0.2em 1em 0.2em;
+      font-weight: 500;
+      letter-spacing: 1px;
+      box-shadow: 0 1px 6px rgba(53,92,74,0.06);
+    }
+    .about {
+      background: var(--accent);
+      border-radius: 14px;
+      padding: 1.1em 1.1em 1em 1.1em;
+      margin: 1.5em 0 2em 0;
+      font-size: 1.09em;
       line-height: 1.7;
-      font-size: 1.08rem;
+      color: var(--text);
+      box-shadow: 0 2px 10px rgba(53,92,74,0.07);
     }
-    mark {
-      background: var(--mark-bg);
-      color: var(--mark-color);
+    .about mark {
+      background: var(--secondary);
+      color: var(--primary);
       border-radius: 5px;
       padding: 0.1em 0.35em;
     }
     .section-title {
-      text-align: center;
-      font-size: 1.25rem;
-      font-weight: bold;
+      font-family: 'Comfortaa', cursive;
+      font-size: 1.2em;
       color: var(--primary);
-      margin: 2.2em 0 1em 0;
+      margin: 1.5em 0 0.5em 0;
       letter-spacing: 1px;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 0.2em;
+      font-weight: bold;
+      text-transform: uppercase;
     }
     .video-container {
+      margin: 1em 0 2em 0;
       display: flex;
       justify-content: center;
-      margin: 1em 0;
     }
     video {
-      border-radius: 14px;
-      border: 2.5px solid var(--accent);
-      box-shadow: 0 2px 12px rgba(47,79,79,0.13);
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      background: #222;
+      border-radius: 16px;
+      border: 2px solid var(--secondary);
+      box-shadow: 0 2px 12px rgba(53,92,74,0.09);
+      max-width: 100%;
+      background: #e3f6ed;
+    }
+    .favorites {
+      background: var(--accent);
+      border-radius: 12px;
+      padding: 1.1em 1.1em 1em 1.1em;
+      margin: 1.3em 0 1.7em 0;
+      font-size: 1.05em;
+      color: var(--text);
+      line-height: 1.65;
+      box-shadow: 0 2px 10px rgba(53,92,74,0.07);
+    }
+    .favorites mark {
+      background: var(--secondary);
+      color: var(--primary);
+      border-radius: 5px;
+      padding: 0.08em 0.3em;
     }
     .quote {
-      margin: 2rem 0 1rem 0;
-      text-align: center;
-      font-style: italic;
-      font-size: 1.1em;
+      margin: 1.5em 0 0 0;
+      padding: 0.9em 1.1em;
+      background: linear-gradient(90deg, #e2f8e5 0%, #c8ecd0 100%);
       color: var(--primary);
-      background: #eafbe1;
-      border-left: 5px solid var(--accent);
-      border-radius: 0 10px 10px 0;
-      padding: 0.8em 1em;
-      box-shadow: 0 2px 12px rgba(86,107,47,0.07);
+      border-left: 6px solid var(--secondary);
+      border-radius: 0 14px 14px 0;
+      font-style: italic;
+      font-size: 1.07em;
+      box-shadow: 0 2px 10px rgba(53,92,74,0.03);
     }
     .back-link {
       display: inline-block;
-      margin: 1.5em 0 0 0;
-      padding: 0.6em 1.6em;
+      margin: 2.1em 0 0 0;
+      padding: 0.55em 1.7em;
       background: var(--primary);
-      color: #fff;
-      border-radius: 8px;
+      color: var(--white);
+      border-radius: 24px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.07rem;
+      font-size: 1.04em;
       letter-spacing: 1px;
+      box-shadow: 0 1px 8px rgba(53,92,74,0.12);
       transition: background 0.2s;
     }
     .back-link:hover {
-      background: var(--accent);
-      color: #fff;
+      background: var(--secondary);
+      color: var(--primary);
     }
-    @media (max-width:600px) {
-      .container {
-        max-width: 98vw;
-        padding: 1em 0.2em;
-      }
-      .profile-img {
-        width: 120px; height: 120px;
-      }
-      h1 { font-size: 1.4rem; }
+    @media (max-width: 600px) {
+      .main-card { max-width: 99vw; padding: 1.3em 0.3em; }
+      .profile-img { width: 90px; height: 90px; }
+      h1 { font-size: 1.3rem; }
+      .section-title { font-size: 1em; }
+      .chip { font-size: 0.9em; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Triel Cali T. Cruz</h1>
-    <div class="tagline">GROUP #4 &mdash; 12 TITANIUM</div>
-    <div class="scrolling-text"><span>"To anyone I've offended this year, please work on yourself so that I don't have to do it again."</span></div>
-
+  <div class="main-card">
     <img src="triel2.jpg" alt="Triel Cali T. Cruz" class="profile-img">
+    <h1>Triel Cali T. Cruz</h1>
+    <div class="subtitle">Student | Creative | Learner</div>
+    <div class="chip">Group #4</div>
+    <div class="chip">12 - TITANIUM</div>
 
-    <div class="info">
-      My name is <b><mark>Triel Cali T. Cruz</mark></b>, I am
-      <b><mark>17 Years Old</mark></b>, and I was born on
-      <b><mark>July 26, 2007</mark></b> at
-      <b><mark>Muntinlupa City</mark></b>.
+    <div class="about">
+      Hello! My name is <mark>Triel Cali T. Cruz</mark>, I am <mark>17 years old</mark>, and I was born on <mark>July 26, 2007</mark> in <mark>Muntinlupa City</mark>.
     </div>
 
     <div class="section-title">Music</div>
@@ -199,14 +186,20 @@
       </video>
     </div>
 
+    <div class="section-title">Favorites & Hobbies</div>
     <div class="favorites">
-      My favorite color is <b><mark>Teal Green</mark></b>, and I like listening to
-      <b><mark>Life is Full</mark></b> by John Mayer because his song really suits my taste in music.<br><br>
-      I've also been watching <b><mark>Love Next Door</mark></b> because the plots of this story are really funny and sad at the same time.<br><br>
-      I also like <b><mark>Leche Flan</mark></b> because my grandma has been making this for me since I was a child, and it became part of my core memory. I have been craving this lately since I haven't eaten one in a while.<br><br>
-      I really like <b><mark>Learning new things</mark></b> too! I love how it brings me a sense of self-achievement.
+      My favorite color is <mark>Teal Green</mark>.<br>
+      I enjoy listening to <mark>Life is Full</mark> by John Mayer because his music really suits my taste.<br>
+      Recently, I've been watching <mark>Love Next Door</mark>—the plot is both funny and touching.<br>
+      <mark>Leche Flan</mark> is my go-to dessert; my grandma made it for me since I was a child, and it's now a core memory. I've been craving it lately!<br>
+      I'm always eager to <mark>learn new things</mark>; it gives me a sense of self-achievement.
     </div>
-    <a href="index.html" class="back-link">&larr; BACK</a>
+
+    <div class="quote">
+      "To anyone I've offended this year, please work on yourself so that I don't have to do it again."
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back</a>
   </div>
 </body>
 </html>
